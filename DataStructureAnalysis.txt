@@ -1,0 +1,25 @@
+**
+This is an analysis of the runtime and memory for multiple data structures.
+The situation is reading a list of courses and storing them.
+**
+
+  Each data structure – vector, hash table, and binary search tree – can store the course objects and order
+them easily. I recommend using a binary search tree to store the course objects.
+
+  The vector acting as a singly linked list has the fastest worst-case runtime, making it ideal for speed. However,
+the vector uses an append method to add objects to the end of the list; it is more difficult to use a vector when
+inserting an object somewhere in the middle of the list. Being able to insert courses at specific locations automatically,
+e.g., automatic sorting of courses, is desired for the application of a course schedule. If a course is added, it should
+automatically be placed in the correct spot. For this reason, the vector is not the ideal choice of data structure.
+
+  The hash table has a slower worst-case runtime than the vector structure, but it is also the most secure structure. The
+hash table stores course objects at a key location based on the course number. Because this information is not sensitive,
+the extra time taken for security is not necessary. Course information is publicly available, and the course schedule is as
+well. For this reason, the hash table is not the ideal choice of data structure.
+
+  The binary search tree has a slower worst-case runtime than the vector structure and may have a faster or slower worst-case
+runtime than the hash table structure depending on the values of n and m. The binary search tree insert function automatically
+places the course objects in the correct order to print the course schedule. Searching for a course through a binary tree has
+a worst-case runtime of O(logn), which is faster than other structures. Overall, the binary search tree makes it easy to order
+courses and provides fast operations for course creation and insertion, file validation, and searching. For this reason, the
+binary search tree is the ideal choice of data structure.
